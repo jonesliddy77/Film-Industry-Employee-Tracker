@@ -49,7 +49,7 @@ async function startingQuetions() {
                 choices: [
                     'View All',
                     'View All Departments',
-                    'Add New DeDepartment',
+                    'Add New Department',
                     'View All Employees',
                     'Add New Employees',
                     'View All Roles',

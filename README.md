@@ -5,7 +5,7 @@
 * Lets user add and view employees, rolls, and departments.
 
 ## Table of Contents
-
+* [Links](#Links)
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Demo](#Demo)
@@ -14,15 +14,11 @@
 
 ## Demo
 
-  ![Demo](assets/demo-readme.gif)
-  
-## Demo Pic
-
-  ![Demo](assets/screenshot.png)
+  ![Demo](Assets/demo-employee-tracker.gif)
 
 ## Links
 
-* Project Repo: [Repository](https://github.com/jonesliddy77/README-Generator)
+* Project Repo: [Repository](https://github.com/jonesliddy77/Film-Industry-Employee-Tracker)
 
 ## Installation
 ``` 

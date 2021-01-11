@@ -20,7 +20,7 @@ var connection = mysql.createConnection({
     database: 'employee_trackerDB',
 });
 term.red(
-    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n'
+    '///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n'
 );
 console.log(
     figlet.textSync('Film Industry Employee Tracker!!\n', {
@@ -28,7 +28,7 @@ console.log(
     })
 );
 term.red(
-    '////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n'
+    '///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\n'
 );
 
 // Starting Prompts
@@ -66,7 +66,7 @@ async function startingQuetions() {
                     case 'View All Departments':
                         viewDepartment();
                         break;
-                    case 'Add New DeDepartment':
+                    case 'Add New Department':
                         addDepartments();
                         break;
                     case 'View All Employees':
@@ -131,15 +131,14 @@ async function addDepartments() {
     try {
         NewDepart = await inquirer
             .prompt({
-                type: 'list',
-                message: 'What Department would you like to add?',
-                name: 'new_depart',
-                choices: ['Engineering', 'Sales', 'Finance', 'Legal'],
+                type: 'input',
+                message: 'Whats the name of the department?',
+                name: 'name',
             })
             .then(function (newD) {
                 console.log(newD);
                 connection.promise().query(`INSERT INTO department SET ?`, {
-                    name: newD.new_depart,
+                    name: newD.name,
                 });
                 viewDepartment();
             });
